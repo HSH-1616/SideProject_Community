@@ -1,0 +1,44 @@
+#spring config server로 부터 현재 프로퍼티 정보를 받아옵
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "refresh"
+
+#prod DB 연결
+spring:
+  application:
+    name: community
+  profiles:
+    active: prod
+  config:
+    enable: false
+    import: #Docker run 시점에 주입
+  cloud:
+    config:
+      fail-fast: true
+      retry:
+        initial-interval: 1000 #retry 요청을 위한 Internal
+        max-attempts: 5 #최대 retry 횟수
+        multiplier: 1.1 #실패 할때마다 Intervel에 지연율 곱하기
+      request-connect-timeout: 2000
+      request-read-timeout: 10000
+
+---
+spring:
+  application:
+    name: community
+  profiles:
+    active: dev
+  config:
+    enable: false
+    import: #Docker run 시점에 주입
+  cloud:
+    config:
+      fail-fast: true
+      retry:
+        initial-interval: 1000
+        max-attempts: 5
+        multiplier: 1.1
+      request-connect-timeout: 2000
+      request-read-timeout: 10000
