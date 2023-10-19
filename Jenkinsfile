@@ -1,11 +1,13 @@
 pipeline {
     agent any
-
+     environment {
+        SPRING_CONFIG_IMPORT = "${SPRING_CLOUD_SERVER}"
+    }
     stages {
         stage('App Test') {
             steps {
                 sh "chmod +x gradlew"
-                sh "$env:SPRING_CONFIG_IMPORT=${SPRING_CLOUD_SERVER};./gradlew clean test --parallel"
+                sh "./gradlew clean test --parallel"
 
                 echo "App Test Success"
             }
