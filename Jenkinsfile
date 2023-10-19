@@ -5,7 +5,7 @@ pipeline {
         stage('App Test') {
             steps {
                 sh "chmod +x gradlew"
-                sh "./gradlew clean test --parallel"
+                sh "$env:SPRING_CONFIG_IMPORT=${SPRING_CLOUD_SERVER};./gradlew clean test --parallel"
 
                 echo "App Test Success"
             }

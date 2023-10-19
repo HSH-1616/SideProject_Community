@@ -13,7 +13,7 @@ spring:
     active: prod
   config:
     enable: false
-    import: #Docker run 시점에 주입
+    import:
   cloud:
     config:
       fail-fast: true
@@ -32,7 +32,7 @@ spring:
     active: dev
   config:
     enable: false
-    import: #Docker run 시점에 주입
+    import:
   cloud:
     config:
       fail-fast: true
