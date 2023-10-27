@@ -42,3 +42,11 @@ spring:
         multiplier: 1.1
       request-connect-timeout: 2000
       request-read-timeout: 10000
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+  messages:
+    basename: errors

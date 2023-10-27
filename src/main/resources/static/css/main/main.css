@@ -1,0 +1,238 @@
+/* content */
+.content-area {
+  max-width: 80rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-split {
+  display: flex;
+  column-gap: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.content-best > div:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem -1rem;
+}
+
+.content-box.best {
+  width: 18.5rem;
+  height: 26rem;
+  margin: 1rem;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.content-box.best > a img {
+  width: 18.5rem;
+  height: 10.5rem;
+}
+
+.content-best-top {
+  padding: 1rem;
+}
+
+.content-best-top h4 {
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content-best-top p {
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: 300;
+  height: 4rem;
+  color: #495057;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content-best-middle {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 1.5;
+}
+
+.content-best-middle span {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.content-best-middle ion-icon {
+  vertical-align: middle;
+}
+
+.content-best-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+.content-best-bottom a:hover {
+  color: #525fe1;
+}
+
+.content-best-bottom img {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+
+.content-best-bottom span {
+  font-size: 0.9rem;
+  margin-left: 0.25rem;
+}
+
+.content-best-bottom span:nth-child(4) {
+  color: #999;
+}
+
+.content-best-bottom ion-icon {
+  vertical-align: middle;
+}
+
+.content-box {
+  width: 100%;
+  height: 41.25rem;
+}
+
+.content-banner {
+  max-width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(57, 57, 57, 0.1);
+  position: relative;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.content-banner > div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 1.25rem;
+  width: 6.25rem;
+  height: 4rem;
+}
+
+.content-banner div > img {
+  position: absolute;
+  height: 2rem;
+  top: 0.3rem;
+  right: 6rem;
+}
+
+.content-banner > img {
+  height: 3rem;
+}
+
+.content-banner span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #525fe1;
+}
+
+.content-post {
+  padding: 1.5rem 0.3rem;
+  border-bottom: 1px solid #cacaca;
+}
+
+.content-post a:hover {
+  color: #525fe1;
+}
+
+.content-post-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.content-post-top a > img {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+
+.content-post-top span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #999;
+  margin-left: 0.25rem;
+}
+
+.content-post-top div:first-of-type > a span:first-of-type {
+  color: black;
+}
+
+.content-post-top > div:first-of-type > a > span:first-of-type:hover {
+  color: #525fe1;
+}
+
+.content-post-top ion-icon {
+  vertical-align: middle;
+}
+
+.content-post-bottom a {
+  display: inline-block;
+  width: 23rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* content */
+
+@media all and (max-width: 1024px) {
+  .content-area {
+    max-width: 48rem;
+  }
+
+  .content-box.best {
+    width: 23rem;
+  }
+
+  .content-box.best > a img {
+    width: 23rem;
+  }
+
+  .content-split {
+    display: block;
+  }
+
+  .content-box {
+    margin-bottom: 3rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .content-box.best {
+    width: 100%;
+    height: auto;
+  }
+
+  .content-box.best > a img {
+    width: 100%;
+    height: 20rem;
+  }
+}

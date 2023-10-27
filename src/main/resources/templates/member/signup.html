@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="fragment/head :: head"></th:block>
+<body>
+<link rel="stylesheet" th:href="@{/css/member/signup.css}">
+<div class="signup-form">
+    <div class="signup-form-banner">
+        <a th:href="@{/}"><img th:src="@{/images/common/logo.png}" alt=""/></a>
+        <h2>DEVNITY에 오신것을 환영합니다.</h2>
+        <p>DEVNITY는 소프트웨어 개발자를 위한 지식공유 플랫폼입니다.</p>
+    </div>
+    <div class="signup-form-sns">
+        <span>SNS 회원가입</span>
+        <div>
+            <button>
+                <img th:src="@{/images/member/kakaotalk_logo.png}" alt=""/>
+            </button>
+            <button><img th:src="@{/images/member/google_logo.png}" alt=""/>
+            </button>
+        </div>
+    </div>
+    <div class="signup-form-homepage">
+        <div>
+            <div></div>
+        </div>
+        <div><span>회원가입에 필요한 기본정보를 입력해주세요.</span>
+        </div>
+    </div>
+    <form id="signup" th:action="@{/signup}" th:object="${member}" method="post">
+        <div>
+            <label for="signup-user-id">아이디</label>
+            <div><input id="signup-user-id" type="text" name="memberId" placeholder="6~15자 이내로 입력해주세요" required
+                        th:value="${member.memberId != null} ? ${member.memberId} : ''">
+                <span th:if="${#fields.hasErrors('memberId')}" th:errors="*{memberId}">Incorrect data</span>
+            </div>
+
+        </div>
+        <div><label for="signup-user-password">비밀번호</label>
+            <div><input
+                    id="signup-user-password"
+                    type="password"
+                    name="memberPwd"
+                    placeholder="최소 8자 이상(알파벳, 숫자, 특수기호 필수)"
+                    required
+            />
+                <span th:if="${#fields.hasErrors('memberPwd')}" th:errors="*{memberPwd}">Incorrect data</span>
+            </div>
+        </div>
+        <div><label for="signup-user-password-confirm">비밀번호 확인</label>
+            <div><input
+                    id="signup-user-password-confirm"
+                    type="password"
+                    placeholder="비밀번호 입력"
+            />
+            </div>
+            <span id="signup-user-password-confirm-warn">동일한 비밀번호를 입력해주세요.</span>
+        </div>
+        <div><label for="signup-user-email">이메일</label>
+            <div><input
+                    id="signup-user-email"
+                    type="email"
+                    name="memberEmail"
+                    placeholder="devnity@devnity.com"
+                    required
+                    th:value="${member.memberEmail != null} ? ${member.memberEmail} : ''"
+            />
+                <span th:if="${#fields.hasErrors('memberEmail')}" th:errors="*{memberEmail}">Incorrect data</span>
+            </div>
+        </div>
+        <div><label for="signup-user-nickname">닉네임</label>
+            <div><input
+                    id="signup-user-nickname"
+                    type="text"
+                    name="memberNickname"
+                    placeholder="사용할 별명을 10자 이내로 입력해주세요. (특수기호 금지)"
+                    required
+                    th:value="${member.memberNickname != null} ? ${member.memberNickname} : ''"/>
+                <span th:if="${#fields.hasErrors('memberNickname')}" th:errors="*{memberNickname}">Incorrect data</span>
+            </div>
+        </div>
+        <div class="signup-form-notice">
+            <p>
+                <ion-icon name="information-circle"></ion-icon>
+                이메일은 인증
+                용도로만 사용되며 개인정보를 활용하지 않습니다.
+            </p>
+        </div>
+        <div class="signup-form-recaptha">
+            <div id="g-recaptcha"></div>
+        </div>
+        <div class="signup-form-submit">
+            <button class="disabled-btn" type="submit" disabled>
+                회원가입
+            </button>
+        </div>
+        <p>이미 회원이신가요? <a th:href="@{/login}">로그인</a></p>
+    </form>
+</div>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script th:src="@{/js/member/signup.js}"></script>
+</body>
+</html>

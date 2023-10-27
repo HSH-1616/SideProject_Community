@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class ConfigVariable {
-
+    //DataSource
     @Value("${DRIVERCLASSNAME}")
     private String driver;
 
@@ -22,4 +22,25 @@ public class ConfigVariable {
 
     @Value("${PASSWORD}")
     private String password;
+
+    //Email
+    @Value("${EMAIL_USERNAME}")
+    private String emailUserName;
+
+    @Value("${EMAIL_PASSWORD}")
+    private String emailPassword;
+
+    //Redis
+    @Value("${REDIS_HOST}")
+    private String redisHost;
+
+    @Value("${REDIS_PORT}")
+    private int redisPort;
+
+    @Value("${REDIS_PASSWORD}")
+    private String redisPassword;
+
+    //Recaptcha
+    @Value("${RECAPTCHA_KEY}")
+    private String recaptchaKey;
 }

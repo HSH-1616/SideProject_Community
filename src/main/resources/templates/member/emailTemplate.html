@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Devnity Email</title>
+</head>
+<body style="background-color: #ededed; font-family: arial, helvetica, sans-serif">
+<div style="width: 600px; margin: 6.25rem auto; text-align: center">
+    <img
+            src="cid:logo"
+            alt=""
+            style="height: 3rem; margin-bottom: 3rem"
+    />
+    <div
+            style="
+          height: 20rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+    >
+        <img
+                src="cid:image"
+                alt=""
+        />
+
+    </div>
+
+    <div style="background-color: #ededed; padding: 2rem">
+        <h2
+                style="
+            color: #525fe1;
+            font-size: 1.7rem;
+            position: relative;
+          "
+        >
+            DEVNITY에 가입하신걸 환영합니다!
+        </h2>
+        <table
+                height="0px"
+                align="center"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                width="22%"
+                style="
+            border-collapse: collapse;
+            table-layout: fixed;
+            border-spacing: 0;
+            vertical-align: top;
+            border-top: 10px dotted #525fe1;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            margin: 0 auto;
+          "
+        >
+            <tbody>
+            <tr style="vertical-align: top">
+                <td
+                        style="
+                  word-break: break-word;
+                  border-collapse: collapse !important;
+                  vertical-align: top;
+                  font-size: 0px;
+                  line-height: 0px;
+                  mso-line-height-rule: exactly;
+                  -ms-text-size-adjust: 100%;
+                  -webkit-text-size-adjust: 100%;
+                "
+                >
+                    <span>&nbsp;</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div style="margin: 2rem">
+            <p
+                    style="
+              font-weight: bold;
+              font-size: 1.2rem;
+              font-family: sans-serif;
+            "
+            >
+                아래 버튼을 클릭해서 로그인이 가능합니다
+            </p>
+        </div>
+        <a th:href="@{${path}}"
+           style="
+            background-color: #525fe1;
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+          ">
+            START!
+        </a>
+        <div style="
+            margin-top: 4rem;
+            text-align: start;
+            font-size: 0.9rem;
+            color: #525fe1;
+            font-weight: bold;
+          "
+        >
+            <p>- 이메일 인증 유효기간은 5분입니다.</p>
+            <p>- 인증이 기간이 만료되면 회원정보가 삭제되니 주의해주세요.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

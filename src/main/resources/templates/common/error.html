@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="fragment/head :: head"></th:block>
+<body>
+<div style="max-width: 28rem; margin: 8rem auto; text-align: center">
+    <div>
+        <a th:href="@{/}"><img th:src="@{/images/common/logo.png}" alt="" style="height: 3rem"/></a>
+    </div>
+    <div style="margin-top: 4rem">
+        <ion-icon
+                name="warning-outline"
+                style="font-size: 15rem; color: #525fe1"
+        ></ion-icon>
+
+        <h2
+                style="
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            margin-top: 3rem;
+          "
+        >
+            유효 하지 않은 페이지입니다.
+        </h2>
+        <button
+                style="
+            width: 100%;
+            background-color: #525fe1;
+            border: none;
+            border-radius: 0.375rem;
+            padding: 0.5rem 1rem;
+            color: white;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            margin-top: 1.5rem;
+            cursor: pointer;
+          " th:onclick="|location.href='@{/}'|"
+        >
+            메인 페이지 이동
+        </button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:fragment="header">
+    <nav class="nav-bar">
+        <div class="nav-bar-menu">
+            <a th:href="@{/}" class="logo">
+                <img th:src="@{./images/common/logo.png}" alt="logo" class=""/>
+            </a>
+            <div><a href="">Q&A</a></div>
+            <div><a href="">지식</a></div>
+            <div><a href="">커뮤니티</a></div>
+            <div><a href="">이벤트</a></div>
+            <div><a href="">공지사항</a></div>
+        </div>
+        <div class="nav-bar-search">
+            <ion-icon name="search"></ion-icon>
+            <input type="text" placeholder="검색"/>
+        </div>
+        <div class="nav-bar-button">
+            <button th:onclick="|location.href='@{/login}'|">로그인</button>
+            <button th:onclick="|location.href='@{/signup}'|">회원가입</button>
+        </div>
+        <div class="menu-button">
+            <button>
+                <ion-icon name="reorder-four-outline"></ion-icon>
+            </button>
+        </div>
+    </nav>
+    <div class="menu-popup-area">
+        <div class="menu-popup">
+            <div class="menu-popup-box">
+                <div class="menu-popup-header">
+                    <a th:href="@{/}">
+                        <img th:src="@{./images/common/logo.png}" alt=""/>
+                    </a>
+                    <button>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </div>
+                <div class="menu-popup-content">
+                    <ul>
+                        <li><a href="">Q&A</a></li>
+                        <li><a href="">지식</a></li>
+                        <li><a href="">커뮤니티</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">공지사항</a></li>
+                    </ul>
+                    <div class="menu-popup-button">
+                        <button th:onclick="|location.href='@{/login}'|">로그인</button>
+                        <button th:onclick="|location.href='@{/signup}'|">회원가입</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-popup-blur"></div>
+    </div>
+</header>
+</html>

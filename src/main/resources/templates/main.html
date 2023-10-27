@@ -1,10 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/main/main.css}">
+</th:block>
 <body>
-    <h2>Test</h2>
+<section layout:fragment="content">
+    <div class="content-area">
+        <div class="content-best">
+            <div class="content-banner">
+                <div>
+                    <img th:src="@{/images/main/banner.png}" alt=""/>
+                    <span>Best</span>
+                </div>
+                <img th:src="@{./images/main/best.png}" alt=""/>
+            </div>
+            <div>
+                <div class="content-box best">
+                    <a href="">
+                        <img th:src="@{./images/member/user.png}" alt=""/>
+                        <div class="content-best-top">
+                            <h4>[IntelliJ] 코드 스타일을 설정해보자ddddddddd</h4>
+                            <p>
+                                위의 설정으로 여러줄을 출력하고 글자수를 자를 수 있지만
+                                text-overflow 속성으로 숨긴 부분에 대한 처리가 되질 않는다.
+                                여러 줄에 걸친 숨긴 처리는 현재 웹킷 계열의 브라우저에서만
+                                지원하는 속성으로 아래처럼 작성해 주어야 한다.
+                            </p>
+                        </div>
+                        <div class="content-best-middle">
+                            <div>
+                                <span>약 2시간전</span>
+                            </div>
+                            <div>
+                                <span><ion-icon name="eye-outline"></ion-icon> 0</span>
+                                <span
+                                ><ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                      0</span
+                                >
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content-best-bottom">
+                        <div>
+                            <a href="">
+                                <img th:src="@{./images/member/user.png}" alt=""/>
+                                <span>hgfgf1116</span>
+                                <span>·</span>
+                                <span><ion-icon name="flash"></ion-icon> 117</span>
+                            </a>
+                        </div>
+                        <div>
+                            <span><ion-icon name="heart"></ion-icon> 16</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-split">
+            <div class="content-box q&a">
+                <div class="content-banner">
+                    <div>
+                        <img th:src="@{./images/main/banner.png}" alt=""/>
+                        <span>Q&A</span>
+                    </div>
+                    <img th:src="@{./images/main/q&a.png}" alt=""/>
+                </div>
+                <ul class="content-line">
+                    <li class="content-post">
+                        <div class="content-post-top">
+                            <div>
+                                <a href="">
+                                    <img th:src="@{./images/member/user.png}" alt=""/>
+                                    <span>hgfgf1116</span>
+                                    <span>·</span>
+                                    <span><ion-icon name="flash"></ion-icon> 117</span>
+                                </a>
+                                <span>·</span>
+                                <span>약 2시간 전</span>
+                            </div>
+                            <div>
+                                <span><ion-icon name="eye-outline"></ion-icon> 0</span>
+                                <span
+                                ><ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                      0</span
+                                >
+                            </div>
+                        </div>
+                        <div class="content-post-bottom">
+                            <a href=""
+                            >일렉트론으로 웹뷰를 띄웠는데 구글 로그인이
+                                안되네요ddddddddddd</a
+                            >
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-box knowledge">
+                <div class="content-banner">
+                    <div>
+                        <img th:src="@{./images/main/banner.png}" alt=""/>
+                        <span>지식</span>
+                    </div>
+                    <img th:src="@{./images/main/best.png}" alt=""/>
+                </div>
+                <ul class="content-line">
+                    <li class="content-post">
+                        <div class="content-post-top">
+                            <div>
+                                <a href="">
+                                    <img th:src="@{./images/member/user.png}" alt=""/>
+                                </a>
+                                <span>hgfgf1116</span>
+                                <span>·</span>
+                                <span><ion-icon name="flash"></ion-icon> 117</span>
+                                <span>·</span>
+                                <span>약 2시간 전</span>
+                            </div>
+                            <div>
+                                <span><ion-icon name="eye-outline"></ion-icon> 0</span>
+                                <span
+                                ><ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                      0</span
+                                >
+                            </div>
+                        </div>
+                        <div class="content-post-bottom">
+                            <a href=""
+                            >일렉트론으로 웹뷰를 띄웠는데 구글 로그인이 안되네요</a
+                            >
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-box community">
+                <div class="content-banner">
+                    <div>
+                        <img th:src="@{./images/main/banner.png}" alt=""/>
+                        <span>커뮤니티</span>
+                    </div>
+                    <img th:src="@{./images/main/community.png}" alt=""/>
+                </div>
+                <ul class="content-line">
+                    <li class="content-post">
+                        <div class="content-post-top">
+                            <div>
+                                <a href="">
+                                    <img th:src="@{./images/member/user.png}" alt=""/>
+                                </a>
+                                <span>hgfgf1116</span>
+                                <span>·</span>
+                                <span><ion-icon name="flash"></ion-icon> 117</span>
+                                <span>·</span>
+                                <span>약 2시간 전</span>
+                            </div>
+                            <div>
+                                <span><ion-icon name="eye-outline"></ion-icon> 0</span>
+                                <span
+                                ><ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                      0</span
+                                >
+                            </div>
+                        </div>
+                        <div class="content-post-bottom">
+                            <a href=""
+                            >일렉트론으로 웹뷰를 띄웠는데 구글 로그인이 안되네요</a
+                            >
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
